@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 24th, Yasmeen! 🏁</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500;1,600&family=DM+Sans:wght@400;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--burg:#5a0f2b;--navy:#0d1b3e;--red:#c8102e;--ivory:#f7f0e3;--silver:#c9ced6;--champ:#e8d9a8;--bg:#f7f0e3;--ink:#2a1420;--card:#fffaf0;
+--serif:'Playfair Display',Georgia,serif;--hand:'Caveat','Bradley Hand',cursive;--sans:'DM Sans','Segoe UI',system-ui,sans-serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10141f;--ink:#f3ead8;--card:#1b2132}}
+:root[data-theme="dark"]{--bg:#10141f;--ink:#f3ead8;--card:#1b2132}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 var(--sans);overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+body.lock{overflow:hidden}[hidden]{display:none!important}
+button{font:inherit;color:inherit;cursor:pointer;border:0;background:none}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-style:italic;margin:0;line-height:1.1}
+h2{font-size:clamp(1.9rem,8vw,2.7rem);text-align:center;color:var(--burg)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:var(--champ)}}
+section{max-width:40rem;margin:0 auto;padding:4rem 1.2rem 1rem}
+.sub{text-align:center;opacity:.75;margin:.5rem 0 1.4rem}
+.btn{display:inline-block;padding:.85rem 1.7rem;border-radius:6px;background:var(--red);color:#fff;font-weight:700;letter-spacing:.08em;box-shadow:0 10px 22px -8px rgba(200,16,46,.7),inset 0 -3px 0 rgba(0,0,0,.25)}
+.btn:active{transform:translateY(2px)}.c{text-align:center}
+.mute{position:fixed;top:calc(.6rem + env(safe-area-inset-top,0px));right:.6rem;z-index:80;width:2.6rem;height:2.6rem;border-radius:50%;background:#0008;color:#fff;font-size:1.2rem}
+
+/* ===== SCENE 1: START ENGINES ===== */
+#start{position:fixed;inset:0;z-index:60;overflow:hidden;background:radial-gradient(120% 80% at 50% 0,#14264f,#05070d 70%);color:#fff;text-align:center;transition:opacity .9s}
+#start.gone{opacity:0;pointer-events:none}
+.stars{position:absolute;inset:0 0 40% 0;background:radial-gradient(1.5px 1.5px at 20% 30%,#fff,transparent),radial-gradient(1px 1px at 70% 20%,#fff,transparent),radial-gradient(1.5px 1.5px at 85% 55%,#fff,transparent),radial-gradient(1px 1px at 40% 60%,#fff,transparent);opacity:.7}
+.lamps{position:absolute;top:calc(2.8rem + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);display:flex;gap:.6rem;padding:.6rem .9rem;background:#0b0d14;border:2px solid var(--silver);border-radius:10px;opacity:0;transition:opacity .5s}
+.lamps.show{opacity:1}.lamps i{width:34px;height:34px;border-radius:50%;background:#2b0a10;box-shadow:inset 0 0 0 3px #111;transition:.15s}
+.lamps i.on{background:#ff1f3d;box-shadow:0 0 22px 6px #ff1f3d99,inset 0 0 0 3px #111}
+.say{position:absolute;top:30%;left:0;right:0;padding:0 1rem;transition:opacity .4s}
+.say h1{font-size:clamp(2rem,9vw,3rem);letter-spacing:.02em}.say p{margin:.5rem 0 1.4rem;color:var(--champ);font-family:var(--serif);font-style:italic;font-size:1.2rem}
+.road{position:absolute;left:0;right:0;bottom:0;height:30%;background:#12141b;border-top:4px solid var(--silver)}
+.dash{position:absolute;left:0;right:0;top:48%;height:6px;background:repeating-linear-gradient(90deg,#e9e4d2 0 40px,transparent 40px 90px)}
+.run .dash{animation:rd .35s linear infinite}@keyframes rd{to{background-position:-90px 0}}
+.finish{position:absolute;right:16%;bottom:0;width:34px;height:30%;background:repeating-conic-gradient(#fff 0 25%,#111 0 50%) 0 0/17px 17px}
+.carw{position:absolute;left:10vw;bottom:19%;width:min(62vw,330px);transform:translateX(0)}
+.carw svg{display:block;width:100%;height:auto}.vib svg{animation:vib .07s linear infinite alternate}@keyframes vib{to{transform:translateY(2px)}}
+.beam{position:absolute;left:94%;top:34%;width:120%;height:38%;background:linear-gradient(90deg,#fff6c8cc,transparent);clip-path:polygon(0 40%,100% 0,100% 100%,0 60%);opacity:0;animation:hl 2.4s 1s forwards}@keyframes hl{to{opacity:.85}}
+.led{position:absolute;top:30%;width:5px;height:5px;border-radius:50%;background:var(--champ);box-shadow:0 0 8px var(--champ);opacity:0;animation:hl 1s 2.2s forwards}
+.start-btn{position:absolute;left:50%;bottom:calc(3rem + env(safe-area-inset-bottom,0px));transform:translateX(-50%);white-space:nowrap}
+.conf{position:fixed;top:-20px;z-index:90;width:9px;height:14px;animation:cf 3s linear forwards;pointer-events:none}@keyframes cf{to{transform:translateY(110vh) rotate(720deg)}}
+
+/* ===== reveal ===== */
+.hero{min-height:94svh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:2rem 1.2rem;background:linear-gradient(var(--burg),#2a0716);color:var(--ivory);position:relative}
+.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;height:22px;background:repeating-conic-gradient(var(--ivory) 0 25%,#111 0 50%) 0 0/22px 22px}.hero::before{top:0}.hero::after{bottom:0}
+.hero h1{font-size:clamp(2.3rem,11vw,4rem);color:var(--champ)}.hero p{font-family:var(--serif);font-style:italic;font-size:1.25rem;margin:1rem 0 1.6rem}
+.ghost{margin-top:1rem;color:var(--silver);text-decoration:underline;font-size:.95rem}
+.dock{position:fixed;left:0;right:0;bottom:0;z-index:40;display:flex;justify-content:center;padding:.5rem .5rem calc(.5rem + env(safe-area-inset-bottom,0px));pointer-events:none}
+.dock div{pointer-events:auto;display:flex;max-width:100%;overflow-x:auto;padding:.3rem;border-radius:8px;background:var(--navy);box-shadow:0 8px 24px -8px #000a}
+.dock button{padding:.45rem .75rem;border-radius:6px;font-size:.82rem;font-weight:700;white-space:nowrap;color:var(--silver)}.dock button.on{background:var(--red);color:#fff}
+main{padding-bottom:6rem}
+
+/* ===== letter & final ===== */
+.paper{background:var(--card);padding:1.8rem 1.4rem;box-shadow:0 18px 34px -20px #000a;border-top:6px solid var(--burg);font-family:var(--hand);font-size:1.55rem;line-height:1.45;transform:rotate(-.5deg)}
+.paper p{margin:0 0 .9rem}.paper .sig{color:var(--red);text-align:right;margin:0}
+.env{display:block;margin:0 auto;width:min(80vw,280px);aspect-ratio:3/2;position:relative;background:var(--burg);border-radius:6px;box-shadow:0 16px 28px -14px #000a}
+.env::before{content:"";position:absolute;inset:0;background:#7a1a3d;clip-path:polygon(0 0,50% 58%,100% 0);transform-origin:top;transition:transform .7s}.env.open::before{transform:rotateX(180deg)}
+.env b{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);color:var(--champ);font-size:1.4rem}
+.reveal{display:grid;grid-template-rows:0fr;transition:grid-template-rows .9s}.reveal.show{grid-template-rows:1fr}.reveal>div{overflow:hidden}.reveal .paper{margin-top:1.4rem}
+
+/* ===== polaroids ===== */
+.reel{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:1.5rem 1.2rem 2rem;margin:0 -1.2rem;scrollbar-width:none}
+.pol{flex:0 0 72%;max-width:270px;scroll-snap-align:center;background:#fff;padding:.7rem .7rem 0;box-shadow:0 14px 26px -14px #000a;transform:rotate(var(--r));margin:0;color:#2a1420;text-align:center}
+.pol:first-child{margin-left:auto}.pol:last-child{margin-right:auto}
+.ph{aspect-ratio:4/5;background:repeating-linear-gradient(45deg,#ece4d0 0 10px,#f7f0e3 10px 20px);display:grid;place-items:center;font-size:.9rem;overflow:hidden}.ph img{width:100%;height:100%;object-fit:cover}
+.pol figcaption{font-family:var(--hand);font-size:1.4rem;padding:.4rem 0 .6rem;line-height:1.15}
+
+/* ===== PFE & F1 ===== */
+.panel{background:var(--navy);color:#fff;border-radius:14px;padding:1.5rem 1.1rem;text-align:center}
+.panel h2{color:#fff;font-size:1.7rem}.panel h2 em{color:var(--champ)}
+.lane{position:relative;height:44px;margin:.7rem 0;background:#12141b;border-radius:6px;overflow:hidden}
+.lane::after{content:"";position:absolute;right:0;top:0;bottom:0;width:16px;background:repeating-conic-gradient(#fff 0 25%,#111 0 50%) 0 0/8px 8px}
+.lane svg{position:absolute;top:6px;width:64px;left:0;transition:left .7s ease}
+.chk{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin:1rem 0}
+.chk button{padding:.5rem .9rem;border-radius:6px;background:#ffffff1f;color:#fff;font-weight:600;font-size:.92rem}.chk button.done{background:var(--champ);color:var(--burg);text-decoration:line-through}
+.msg{font-family:var(--serif);font-style:italic;font-size:1.2rem;margin:.6rem 0 0;min-height:3.4rem}
+.tires{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;max-width:18rem;margin:1rem auto}
+.tires button{aspect-ratio:1;border-radius:50%;background:#111;box-shadow:inset 0 0 0 6px #333,inset 0 0 0 10px var(--silver);color:#fff;font-size:.75rem;font-weight:700}.tires button.done{box-shadow:inset 0 0 0 6px #333,inset 0 0 0 10px var(--red)}
+.tabs{display:flex;gap:.4rem;justify-content:center;margin-bottom:1rem}.tabs button{padding:.55rem 1.1rem;border-radius:6px;background:var(--card);font-weight:700;box-shadow:0 0 0 2px var(--burg)}.tabs button.on{background:var(--burg);color:#fff}
+.fcb{border-radius:14px;padding:1.5rem 1rem;text-align:center;color:#fff;background:repeating-linear-gradient(90deg,#0d1b3e 0 36px,#6b1034 36px 72px);position:relative;overflow:hidden;min-height:17rem}
+.fcb h3{font-size:1.6rem;text-shadow:0 2px 8px #000}.fcb p{text-shadow:0 2px 8px #000}
+.goal{position:absolute;right:10px;top:46%;width:56px;height:70px;border:3px solid #fff;border-right:0;background:repeating-linear-gradient(45deg,#fff3 0 4px,transparent 4px 8px)}
+.ball{position:absolute;left:14%;bottom:20px;font-size:2.2rem;transition:left 1s cubic-bezier(.3,.6,.4,1),bottom 1s;cursor:pointer}.ball.shot{left:80%;bottom:110px;transform:rotate(540deg)}
+.map{position:relative;background:linear-gradient(#e8d9a8,#f7f0e3);border-radius:14px;padding:1rem;color:var(--burg);text-align:center}
+.pts{display:flex;flex-wrap:wrap;gap:.45rem;justify-content:center;margin:.8rem 0}.pts button{padding:.5rem .9rem;border-radius:99px;background:var(--burg);color:#fff;font-weight:600;font-size:.9rem}.pts button.on{background:var(--red)}
+
+/* ===== wishes & cake ===== */
+.wgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:.5rem;max-width:24rem;margin:0 auto}
+.wgrid button{aspect-ratio:1;border-radius:6px;background:var(--card);box-shadow:0 0 0 2px var(--burg);font-family:var(--serif);font-weight:600;font-size:1.15rem;color:var(--burg)}.wgrid button.seen{background:var(--burg);color:var(--champ)}
+.wcard{margin:1.3rem auto 0;max-width:30rem;min-height:7.5rem;display:grid;place-items:center;text-align:center;padding:1.1rem;background:var(--card);border-top:3px solid var(--red);font-family:var(--serif);font-size:1.35rem}
+.cake{position:relative;width:min(90vw,340px);margin:3.4rem auto 0;padding-top:4.4rem}
+.cndl{position:absolute;top:0;left:5%;right:5%;display:flex;flex-wrap:wrap;gap:8px 4px;justify-content:center}
+.cndl i{position:relative;width:9px;height:26px;border-radius:2px;background:repeating-linear-gradient(-30deg,var(--red) 0 4px,var(--ivory) 4px 8px)}
+.cndl i::before{content:"";position:absolute;left:50%;top:-12px;width:8px;height:13px;transform:translateX(-50%);border-radius:50% 50% 50% 50%/65% 65% 35% 35%;background:radial-gradient(#fff6c8,#ff9d3c);animation:fl .25s infinite alternate;transition:opacity .4s}@keyframes fl{to{transform:translateX(-50%) scale(.9,1.12)}}
+.cake.out .cndl i::before{opacity:0;animation:none}
+.t1,.t2{margin:0 auto;position:relative;background:linear-gradient(90deg,#efe3c6,#fff7e6 45%,#eadbb8);box-shadow:inset 0 -8px 0 #dcc896}
+.t1{width:66%;height:78px;border-radius:12px 12px 4px 4px}.t2{width:100%;height:100px;margin-top:-6px;border-radius:12px}
+.t1::after,.t2::after{content:"";position:absolute;left:0;right:0;top:0;height:16px;border-radius:12px 12px 50% 50%/12px 12px 16px 16px;background:#fffaf0}
+.t1::before,.t2::before{content:"";position:absolute;left:0;right:0;height:11px;background:var(--burg);top:46px}.t2::before{top:56px}
+.plate{width:112%;margin:-4px 0 0 -6%;height:16px;border-radius:50%;background:var(--silver);box-shadow:0 8px 16px #0006}
+.spark{position:absolute;top:0;pointer-events:none;color:var(--champ);animation:sp 1.6s ease-out forwards}@keyframes sp{to{opacity:0;transform:translate(var(--x),var(--y))}}
+.wmsg{margin:1.6rem auto 0;max-width:30rem;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.45rem;opacity:0;transform:translateY(12px);transition:1s}.wmsg.show{opacity:1;transform:none}
+footer{text-align:center;padding:3rem 1rem;font-family:var(--hand);font-size:1.8rem;color:var(--red)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body class="lock">
+<!-- original car graphic, reused everywhere (burgundy, navy, red, silver; no pink) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="car" viewBox="0 0 200 64">
+<path d="M4 44 L28 30 L72 28 L92 14 L122 14 L136 28 L186 32 L198 42 L198 48 L4 48Z" fill="#5a0f2b"/>
+<path d="M72 28 L92 14 L122 14 L136 28Z" fill="#0d1b3e"/><path d="M6 40 L196 40 L198 44 L5 44Z" fill="#c8102e"/>
+<rect x="0" y="24" width="22" height="5" fill="#c9ced6"/><rect x="176" y="46" width="22" height="4" fill="#c9ced6"/><path d="M98 14 Q108 4 118 14" stroke="#c9ced6" stroke-width="3" fill="none"/>
+<circle cx="44" cy="50" r="12" fill="#111"/><circle cx="44" cy="50" r="5" fill="#c9ced6"/><circle cx="156" cy="50" r="12" fill="#111"/><circle cx="156" cy="50" r="5" fill="#c9ced6"/></symbol></defs></svg>
+
+<button class="mute" id="mute" type="button" aria-pressed="false" aria-label="Mute sound">🔊</button>
+
+<!-- SCENE 1 -->
+<div id="start">
+  <div class="stars"></div>
+  <div class="lamps" id="lamps"><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="say" id="say"><h1>READY, YASMEEN?</h1><p>Your next chapter starts now.</p></div>
+  <div class="road" id="road"><div class="dash"></div></div><div class="finish"></div>
+  <div class="carw" id="carw"><svg viewBox="0 0 200 64" role="img" aria-label="Burgundy and navy racing car"><use href="#car"/></svg><i class="beam"></i><i class="led" style="left:46%"></i><i class="led" style="left:52%"></i><i class="led" style="left:58%"></i></div>
+  <button class="btn start-btn" id="go" type="button">START THE ENGINE 🏁</button>
+</div>
+
+<main id="main" hidden>
+  <header class="hero" id="top">
+    <h1>HAPPY 24TH BIRTHDAY, YASMEEN!</h1>
+    <p>24 years. Countless dreams. A whole world waiting for you.</p>
+    <button class="btn" type="button" data-go="letter">OPEN YOUR GIFT</button>
+    <button class="ghost" id="replay" type="button">↺ Replay the start</button>
+  </header>
+
+  <section id="letter"><h2>A letter from your university girl</h2><p class="sub">&nbsp;</p>
+    <!-- EDIT: change the words of your letter here -->
+    <article class="paper"><p>Dear Yasmeen,</p>
+      <p>You were the first girl I got to know at university, and I’m so grateful that university brought us together.</p>
+      <p>Thank you for all the memories, conversations and little moments we shared. Now it’s our final year, and we’re PFE partners, facing the last big challenge side by side.</p>
+      <p>I hope our friendship keeps going long after graduation. Happy 24th birthday!</p>
+      <p class="sig">Your university girl ♡</p></article></section>
+
+  <!-- PHOTOS: put your pictures next to index.html and list their file names in PHOTOS (script, bottom) -->
+  <section id="photos"><h2>Our university era</h2><p class="sub">Swipe sideways</p><div class="reel" id="reel"></div></section>
+
+  <section id="pfe"><div class="panel"><h2>THE PFE DUO<br><em>FINAL LAP: SURVIVAL MODE ON</em></h2>
+    <div class="lane"><svg viewBox="0 0 200 64" id="c1"><use href="#car"/></svg></div>
+    <div class="lane"><svg viewBox="0 0 200 64" id="c2" style="filter:hue-rotate(200deg)"><use href="#car"/></svg></div>
+    <p class="sub" style="margin:0">Tap each checkpoint to move us forward</p><div class="chk" id="chk"></div>
+    <p class="msg" id="pmsg">Two girls, one final project, countless corrections and one finish line. We’ve got this.</p></div></section>
+
+  <section id="world"><h2>Yasmeen’s world</h2><p class="sub">Pick a lane</p>
+    <div class="tabs" id="tabs"><button class="on" data-p="f1" type="button">Formula 1</button><button data-p="fcb" type="button">Barça</button></div>
+    <div class="panel" id="p-f1"><h3 style="font-size:1.6rem">LIFE IN THE FAST LANE</h3>
+      <div class="lane"><svg viewBox="0 0 200 64" style="animation:drv 3s linear infinite"><use href="#car"/></svg></div><style>@keyframes drv{from{left:-70px}to{left:100%}}</style>
+      <p>Pit stop! Tap all 4 tyres as fast as you can.</p><div class="tires" id="tires"></div><p class="msg" id="tmsg">Keep chasing your dreams at your own pace. Take the turns, enjoy the ride, and never forget how capable you are.</p></div>
+    <div class="fcb" id="p-fcb" hidden><h3>MÉS QUE UN CLUB</h3><p>Stadium lights on, whole stand singing. Happy birthday to the biggest Barça fan I know. Tap the ball!</p><div class="goal"></div><span class="ball" id="ball" role="button" tabindex="0" aria-label="Kick the ball">⚽</span><p id="gmsg" style="position:absolute;left:0;right:0;bottom:8px;margin:0;font-weight:700"></p></div></section>
+
+  <section id="adventure"><h2>THE WORLD IS WAITING FOR YOU</h2><p class="sub">Tap the milestones on your map</p>
+    <div class="map"><svg viewBox="0 0 300 100" width="100%" aria-hidden="true"><polygon points="0,100 60,35 105,75 160,10 230,85 300,45 300,100" fill="#6b1034"/><polygon points="0,100 45,62 110,98 190,58 300,100" fill="#0d1b3e"/><path d="M20 92 Q90 60 150 74 T280 40" stroke="#e8d9a8" stroke-width="3" stroke-dasharray="6 6" fill="none"/></svg>
+    <div class="pts" id="pts"></div><p class="msg" id="amsg">May you never stop exploring, discovering new places, taking new paths and finding beautiful views along the way. There is so much life waiting for you.</p></div></section>
+
+  <section id="wishes"><h2>24 wishes for 24</h2><p class="sub">Tap a number to open a note</p><div class="wgrid" id="wgrid"></div><div class="wcard" id="wcard">Pick a number ✨</div></section>
+
+  <section id="cake"><h2>Make a wish</h2>
+    <div class="cake" id="cakeEl"><div class="cndl" id="cndl"></div><div class="t1"></div><div class="t2"></div><div class="plate"></div></div>
+    <div class="c" style="margin-top:1.6rem"><button class="btn" id="wishBtn" type="button">MAKE A WISH</button></div>
+    <p class="wmsg" id="wmsg">May this new chapter bring you everything your heart has been hoping for.</p></section>
+
+  <section id="final"><h2>One more thing…</h2><p class="sub">Tap the envelope</p>
+    <button class="env" id="env" type="button" aria-expanded="false" aria-label="Open the final letter"><b>♥</b></button>
+    <div class="reveal" id="rev"><div><article class="paper">
+      <p>University brought us together, but I hope life gives us a thousand more reasons to stay close.</p>
+      <p>We still have so many dreams to chase, places to visit, goals to achieve and memories to make.</p>
+      <p>I’m so happy that you were the first girl I met at university.</p>
+      <p>Now let’s finish this final chapter together, make ourselves proud, and see what life has planned for us.</p>
+      <p>Happy 24th, Yasmeen. Never stop believing in yourself. I’m always cheering for you.</p>
+      <p class="sig">With love, your university girl. ♡</p></article></div></div></section>
+  <footer>Happy 24th, Yasmeen ♡</footer>
+  <nav class="dock"><div><button data-go="letter">Letter</button><button data-go="photos">Photos</button><button data-go="pfe">PFE</button><button data-go="world">World</button><button data-go="adventure">Trail</button><button data-go="wishes">Wishes</button><button data-go="cake">Cake</button><button data-go="final">Finale</button></div></nav>
+</main>
+
+<script>
+(function(){"use strict";
+var $=function(s){return document.querySelector(s)},$$=function(s){return [].slice.call(document.querySelectorAll(s))};
+/* ===== EDIT ME: photos, captions, wishes ===== */
+var PHOTOS=['','','','',''];   // e.g. ['photo1.jpg','photo2.jpg',...]  (files next to index.html)
+var CAPS=['The first girl I met at university.','Our university era.','One last year together.','From classmates to PFE partners.','Memories I’ll always keep.'];
+var CHECKS=[['Research papers','Page 47 and still reading.'],['Endless corrections','Version FINAL_final_v7.'],['Deadlines approaching','Breathe. We planned for this.'],['Coffee breaks','Fuel for the final lap.'],['Supervisor feedback','Notes received. Pushing on.'],['Presentation day','We’re ready. Chequered flag!']];
+var TRAIL=[['New places','Somewhere you’ve never been is waiting.'],['New experiences','Say yes to the unexpected.'],['Big dreams','Dream bigger, then go get it.'],['Unexpected adventures','The best plans are the surprise ones.'],['Beautiful memories','Collect moments, not just photos.']];
+var WISH=['Believe in yourself the way I believe in you.','May confidence walk into every room with you.','Be as kind to yourself as you are to others.','May friendship always find you.','May your career take off, and stay on course.','Be brave even when it shakes.','May every new beginning feel like a gift.','May happiness be your default setting.','Travel far, and come back with stories.','May your next adventure come sooner than you think.','May you build the financial freedom you dream of.','Grow at your own pace. It’s still growth.','May peace find you on busy days.','Chase the dream, not the deadline.','May doors open that you didn’t even knock on.','Success looks good on you.','Be proud of how far you’ve come.','May your circle stay close and your heart open.','Take the turns, enjoy the ride.','Rest is part of the race.','May your best chapters be ahead.','You are more capable than you think.','May life surprise you in beautiful ways.','Here’s to 24 and everything to come.'];
+/* ======================================== */
+var muted=false,AC=null,reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* sound: only after a tap */
+function engine(f0,f1,d){if(muted)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();if(AC.resume)AC.resume();var t=AC.currentTime,o=AC.createOscillator(),g=AC.createGain(),l=AC.createBiquadFilter();
+  o.type='sawtooth';l.type='lowpass';l.frequency.value=700;o.frequency.setValueAtTime(f0,t);o.frequency.exponentialRampToValueAtTime(f1,t+d);
+  g.gain.setValueAtTime(.0001,t);g.gain.exponentialRampToValueAtTime(.12,t+.15);g.gain.exponentialRampToValueAtTime(.0001,t+d+.3);
+  o.connect(l);l.connect(g);g.connect(AC.destination);o.start(t);o.stop(t+d+.4)}catch(e){}}
+$('#mute').addEventListener('click',function(){muted=!muted;this.setAttribute('aria-pressed',muted);this.textContent=muted?'🔇':'🔊';this.setAttribute('aria-label',muted?'Unmute sound':'Mute sound')});
+
+/* scene 1 */
+var timers=[];function at(f,ms){timers.push(setTimeout(f,reduce?0:ms))}
+function confetti(){var C=['#5a0f2b','#0d1b3e','#c8102e','#e8d9a8','#c9ced6'];for(var i=0;i<46;i++){var e=document.createElement('i');e.className='conf';e.style.left=Math.random()*100+'vw';e.style.background=C[i%5];e.style.animationDelay=Math.random()*.8+'s';document.body.appendChild(e);setTimeout(function(x){x.remove()},4200,e)}}
+function reveal(){$('#main').hidden=false;$('#start').classList.add('gone');document.body.classList.remove('lock');window.scrollTo(0,0);if(!reduce)confetti()}
+$('#go').addEventListener('click',function(){
+  this.hidden=true;var car=$('#carw'),L=$$('#lamps i'),lamps=$('#lamps');
+  if(reduce){reveal();return}
+  car.classList.add('vib');engine(50,110,.9);lamps.classList.add('show');
+  L.forEach(function(l,i){at(function(){l.classList.add('on');engine(70+i*8,90+i*8,.4)},900+i*650)});
+  at(function(){L.forEach(function(l){l.classList.remove('on')});$('#say').style.opacity=0;engine(90,380,2.2);
+    car.style.transition='transform 2.4s cubic-bezier(.55,0,1,.7)';car.style.transform='translateX(112vw)';$('#start').classList.add('run')},4500);
+  at(reveal,7000)});
+$('#replay').addEventListener('click',function(){timers.forEach(clearTimeout);var s=$('#start'),car=$('#carw');$('#main').hidden=true;document.body.classList.add('lock');
+  car.style.transition='none';car.style.transform='';car.classList.remove('vib');s.classList.remove('run');$$('#lamps i').forEach(function(l){l.classList.remove('on')});$('#lamps').classList.remove('show');$('#say').style.opacity=1;$('#go').hidden=false;s.classList.remove('gone');window.scrollTo(0,0)});
+
+/* nav */
+$$('[data-go]').forEach(function(b){b.addEventListener('click',function(){var t=document.getElementById(b.dataset.go);if(t)t.scrollIntoView({behavior:'smooth',block:'start'})})});
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)$$('.dock button').forEach(function(b){b.classList.toggle('on',b.dataset.go===e.target.id)})})},{rootMargin:'-45% 0px -50% 0px'});
+  ['letter','photos','pfe','world','adventure','wishes','cake','final'].forEach(function(i){io.observe(document.getElementById(i))})}
+
+/* polaroids */
+var R=[-3,2,-1.5,3,-2];PHOTOS.forEach(function(s,i){var f=document.createElement('figure');f.className='pol';f.style.setProperty('--r',R[i]+'deg');
+  f.innerHTML='<div class="ph">'+(s?'<img src="'+s+'" alt="'+CAPS[i]+'">':'Your photo here')+'</div><figcaption>'+CAPS[i]+'</figcaption>';$('#reel').appendChild(f)});
+
+/* PFE track */
+var pd=0;CHECKS.forEach(function(c){var b=document.createElement('button');b.type='button';b.textContent=c[0];b.addEventListener('click',function(){if(b.classList.contains('done'))return;b.classList.add('done');pd++;
+  var p=pd/CHECKS.length,w=$('.lane').clientWidth-80;$('#c1').style.left=(p*w)+'px';$('#c2').style.left=(Math.max(0,p-.08)*w)+'px';$('#pmsg').textContent=pd===CHECKS.length?'Chequered flag! Two girls, one final project, countless corrections and one finish line. We did it. 🏁':c[1]});$('#chk').appendChild(b)});
+
+/* world tabs, pit stop, goal */
+$$('#tabs button').forEach(function(b){b.addEventListener('click',function(){$$('#tabs button').forEach(function(x){x.classList.toggle('on',x===b)});$('#p-f1').hidden=b.dataset.p!=='f1';$('#p-fcb').hidden=b.dataset.p!=='fcb'})});
+var t0=0,td=0;for(var i=1;i<=4;i++)(function(i){var b=document.createElement('button');b.type='button';b.textContent='T'+i;b.addEventListener('click',function(){if(!t0)t0=Date.now();if(b.classList.contains('done'))return;b.classList.add('done');td++;
+  if(td===4){$('#tmsg').textContent='Pit stop done in '+((Date.now()-t0)/1000).toFixed(1)+'s. Back on track! Keep chasing your dreams at your own pace.';setTimeout(function(){td=0;t0=0;$$('#tires button').forEach(function(x){x.classList.remove('done')})},2500)}});$('#tires').appendChild(b)})(i);
+function kick(){var b=$('#ball');if(b.classList.contains('shot'))return;b.classList.add('shot');setTimeout(function(){$('#gmsg').textContent='GOOOAL! 🎉 Surprise: this whole birthday is a win.';},900);setTimeout(function(){b.classList.remove('shot');$('#gmsg').textContent=''},4200)}
+$('#ball').addEventListener('click',kick);$('#ball').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' ')kick()});
+
+/* trail map */
+TRAIL.forEach(function(t){var b=document.createElement('button');b.type='button';b.textContent=t[0];b.addEventListener('click',function(){$$('#pts button').forEach(function(x){x.classList.toggle('on',x===b)});$('#amsg').textContent=t[1]});$('#pts').appendChild(b)});
+
+/* 24 wishes */
+WISH.forEach(function(w,i){var b=document.createElement('button');b.type='button';b.textContent=i+1;b.setAttribute('aria-label','Note '+(i+1));b.addEventListener('click',function(){b.classList.add('seen');$('#wcard').textContent=w});$('#wgrid').appendChild(b)});
+
+/* cake: exactly 24 candles */
+for(var c=0;c<24;c++)$('#cndl').appendChild(document.createElement('i'));
+var lit=true;$('#wishBtn').addEventListener('click',function(){var k=$('#cakeEl'),m=$('#wmsg');
+  if(lit){lit=false;k.classList.add('out');m.classList.add('show');this.textContent='LIGHT THEM AGAIN';
+    for(var i=0;i<14;i++){var s=document.createElement('span');s.className='spark';s.textContent=['✦','✧'][i%2];s.style.left=(10+Math.random()*80)+'%';s.style.setProperty('--x',(Math.random()*80-40)+'px');s.style.setProperty('--y',(-30-Math.random()*90)+'px');k.appendChild(s);setTimeout(function(e){e.remove()},1700,s)}}
+  else{lit=true;k.classList.remove('out');m.classList.remove('show');this.textContent='MAKE A WISH'}});
+
+/* final envelope */
+$('#env').addEventListener('click',function(){var o=this.classList.toggle('open');this.setAttribute('aria-expanded',o);$('#rev').classList.toggle('show',o)});
+})();
+</script>
+</body>
+</html>
